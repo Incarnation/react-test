@@ -23,3 +23,20 @@ git push -u origin master
 
 
 lt --port 3000
+
+
+heroku link
+
+https://stark-savannah-83469.herokuapp.com/ | https://git.heroku.com/stark-savannah-83469.git
+
+heroku SETUP
+
+You should see your Heroku CLI version. Once that is installed we need to setup up Heroku git repository by running these commands:
+
+heroku login (Enter your Heroku credentials)
+git init
+git add .
+git commit -m “initial commit”
+heroku create (You should see two links after running this command. Copy the second one)
+git remote add heroku PASTE THE LINK YOU JUST COPIED
+git push heroku master
