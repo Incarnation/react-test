@@ -9,6 +9,18 @@
       "title": "others",
       "description": "second stream",
       "id": 2
+    },
+    {
+      "title": "stream with id",
+      "description": "I created this",
+      "userId": null,
+      "id": 3
+    },
+    {
+      "description": "with id 2",
+      "title": "with id 2",
+      "userId": "118104699217911812464",
+      "id": 4
     }
   ]
 }
