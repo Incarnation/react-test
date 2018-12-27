@@ -13,6 +13,7 @@ class StreamDelete extends React.Component {
     this.props.fetchStream(this.props.match.params.id);
   }
 
+  //function to render the buttons in modal
   renderActions() {
     const id = this.props.match.params.id;
     return (
@@ -30,6 +31,7 @@ class StreamDelete extends React.Component {
     );
   }
 
+  //function to render the text in modal
   renderContent() {
     if (!this.props.stream) {
       return "Are you sure you want to delete this stream?";
@@ -38,6 +40,7 @@ class StreamDelete extends React.Component {
     return `are you sure you want to delete ${this.props.stream.title}`;
   }
 
+  //render modal
   render() {
     return (
       <Modal
@@ -50,10 +53,12 @@ class StreamDelete extends React.Component {
   }
 }
 
+//state props mapping
 const mapStateToProps = (state, ownProps) => {
   return { stream: state.streams[ownProps.match.params.id] };
 };
 
+//redux connect
 export default connect(
   mapStateToProps,
   { fetchStream, deleteStream }
