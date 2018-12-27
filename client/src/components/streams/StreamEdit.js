@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+
 import { fetchStream, updateStream } from "../../actions";
 import StreamForm from "./StreamForm";
 
@@ -12,6 +13,7 @@ class StreamEdit extends React.Component {
   }
 
   //call when the component gets render
+  //component life cycle method
   componentDidMount() {
     this.props.fetchStream(this.props.match.params.id);
   }

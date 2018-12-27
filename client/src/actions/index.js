@@ -63,15 +63,19 @@ export const updateStream = (id, values) => {
 
     dispatch({ type: UPDATE_STREAM, payload: response.data });
 
+    //navigate to main page after dispatching
     history.push("/");
   };
 };
 
 //delete action
-export const delteStream = id => {
+export const deleteStream = id => {
   return async dispatch => {
     const response = await streams.delete(`/streams/${id}`);
 
     dispatch({ type: DELETE_STREAM, payload: id });
+
+    //navigate to main page after dispatching
+    history.push("/");
   };
 };
