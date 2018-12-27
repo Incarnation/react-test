@@ -1,26 +1,21 @@
 {
   "streams": [
     {
-      "title": "first stream",
-      "description": "this is  a good stream",
-      "id": 1
-    },
-    {
-      "title": "others",
-      "description": "second stream",
-      "id": 2
-    },
-    {
-      "title": "stream with id",
-      "description": "I created this",
-      "userId": null,
-      "id": 3
-    },
-    {
-      "description": "with id 2",
-      "title": "with id 2",
+      "description": "with id 2 update using patch",
+      "title": "with id 2 update",
       "userId": "118104699217911812464",
       "id": 4
+    },
+    {
+      "title": "test update",
+      "description": "programmatic navigation update",
+      "id": 5
+    },
+    {
+      "title": "refactor",
+      "description": "refactor forms",
+      "userId": "118104699217911812464",
+      "id": 6
     }
   ]
 }

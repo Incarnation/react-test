@@ -8,6 +8,7 @@ import {
   FETCH_STREAM
 } from "./types";
 import streams from "../apis/streams";
+import history from "../history";
 
 //sign in action
 export const signIn = id => {
@@ -31,6 +32,9 @@ export const createStream = values => {
     const response = await streams.post("/streams", { ...values, userId });
 
     dispatch({ type: CREATE_STREAM, payload: response.data });
+
+    //programatic navigate to the home page after getting the response from API
+    history.push("/");
   };
 };
 
@@ -55,9 +59,11 @@ export const fetchStream = id => {
 //update action
 export const updateStream = (id, values) => {
   return async dispatch => {
-    const response = await streams.put(`/streams/${id}`, values);
+    const response = await streams.patch(`/streams/${id}`, values);
 
     dispatch({ type: UPDATE_STREAM, payload: response.data });
+
+    history.push("/");
   };
 };
 
